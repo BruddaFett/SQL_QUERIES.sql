@@ -1,0 +1,27 @@
+Project Sample Summary Queries from SQL + SQL Server IT125 at NSC
+
+Sample Summary Queries to answer the following questions.
+
+1. The Rental table contains movie rental data.  Get a list that shows how many rentals occurred on each date.  
+The results should show (1) the date and (2) the rental count.  Show only those days where over 100 rentals occurred. 
+ 
+2. The Rental table shows what staff member (by id) rented the film.  The Staff table contains detailed staff data.  Get a list of (1) the name of each staff member (in “last, first” format) along with (1) each month and year they rented films, plus (3) how many films they rented that month.  Sort by the staff member, and, within that, the rental count (highest first). 
+ 
+3. The Payments table contains customer payment data.  Get a total of payments for each month of each year, showing in the results (1) the year, (2) month, and (3) payment total.  Sort the list so that the most recent month is at the top and the oldest one is at the bottom. 
+ 
+4. Using data from Payment and the customer data tables (Customer, Address), get a list of (1) the customer name (“last, first” format), (2) district in which they live, along with (3) the count of payments and (4) the total of payments they have made.  Show only the customers who have payment totals of $150 or over.  Sort the list by customer name. 
+ 
+5. Use the Film and Category tables (along with any others that may be necessary) to get a count of films in each category.  In the results show (1) the film count (highest first) and (2) the category (e.g., “Documentary”).  Show only categories with more than 60 films in them.  
+ 
+
+Queries with Subqueries 
+
+6. The Country table contains a country ID and name.  In that table, locate the IDs of countries that have the word “united” anywhere in their name.  Then, in the City table, locate and list cities (by name, not number) in those countries, but only the ones with the word “south” anywhere in the city’s name.  Sort the results by the city’s name. 
+ 
+7. Use the Payment and Customer tables to get a list of customers (show the customer ID, first and last names, and email address) who have ever made payments of $10.00 or more. 
+ 
+8. Write a subquery that finds film IDs (from the Film table) greater than 180 minutes in length.  Then use that to help find a list of category names (from the Category table) that have associated films of that length. 
+ 
+9. A customer calls and wants to rent a copy of “Airplane Sierra”.  Get a list of cities (by name, not ID, and with no repeats) where they can find that film in inventory.  
+ 
+10. Looking at the Address table, you’re interested in finding out how many postal codes show up repeatedly.  Build a query that finds out the largest number of repeats that exist (which will be a simple integer).
