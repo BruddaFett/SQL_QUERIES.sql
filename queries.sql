@@ -2,7 +2,7 @@
 */
 SELECT 
 	COUNT(rental_date) AS RentalCount,
-    rental_date AS `Date`
+    	rental_date 	   AS `Date`
 FROM rental
 GROUP BY rental_date
 HAVING RentalCount > 100;
@@ -15,7 +15,7 @@ HAVING RentalCount > 100;
 SELECT 
 	CONCAT(last_name,', ', first_name) AS Staff,
 	DATE_FORMAT(rental_date, '%e-%b-%y') AS `Date`,
-    COUNT(rental_date) AS RentalCount
+    	COUNT(rental_date) AS RentalCount
 FROM staff
 	JOIN rental USING (staff_id)
 GROUP BY Staff, `Date`
@@ -28,7 +28,7 @@ ORDER BY last_name, rental_date ASC;
 
 SELECT 
 	SUM(amount) AS Total,
-    DATE_FORMAT(payment_date, '%b-%y') AS YearMonth, 
+    	DATE_FORMAT(payment_date, '%b-%y') AS YearMonth, 
 	COUNT(payment_date) AS 'Payment Count'
 FROM payment
 GROUP BY YearMonth
@@ -42,11 +42,11 @@ ORDER BY payment_date DESC;
 SELECT 
 	CONCAT(last_name,', ',first_name) AS Customer, 
 	district AS District, 
-    COUNT(payment_id) AS'Payments', 
-    SUM(amount) AS Total
+    	COUNT(payment_id) AS'Payments', 
+    	SUM(amount) AS Total
 FROM payment
 	JOIN customer USING (customer_id)
-    JOIN address  USING (address_id)
+    	JOIN address  USING (address_id)
 GROUP BY customer
 HAVING SUM(amount) >= 150
 ORDER BY Customer ASC;
@@ -59,7 +59,7 @@ ORDER BY Customer ASC;
 SELECT COUNT(film_id) AS FilmsCount, `name`
 FROM film
 	JOIN film_category USING (film_id)
-    JOIN category USING (category_id)
+    	JOIN category USING (category_id)
 GROUP BY `name`
 HAVING FilmsCount > 60;
 
@@ -125,7 +125,9 @@ GROUP BY city;
 
 
 
-/*	original query
+/*	
+	original query
+
 SELECT city
 FROM film
 	JOIN inventory USING (film_id)
@@ -135,12 +137,11 @@ FROM film
 WHERE title LIKE '%airplane sierra%'
 GROUP BY city;
 
-mini query
+	mini query
+
 SELECT DISTINCT(city), city_id
 FROM city;
 */
-
-
 
 /*		Q 10
 */
