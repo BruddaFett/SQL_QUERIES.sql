@@ -1,3 +1,2 @@
-# SQL_QUERIES.sql
-MySQL
-Summary Query Samples for the previously listed Inventory Database listed in my repositories. 
+# MySQL Inventory Queries
+Summary Query Samples for the previously listed MySQL Inventory Database listed in my repositories. 
